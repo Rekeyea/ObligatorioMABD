@@ -1,9 +1,9 @@
 const { Client } = require('cassandra-driver');
 
-const client = new Client({
-  contactPoints: ['cassandra'],
-  localDataCenter: 'datacenter1',
-});
+const cassandraConfig = {
+  contactPoints: ['localhost'], // Replace with your Cassandra contact points
+  localDataCenter: 'datacenter1'
+};
 
 const createTables = async () => {
   try {
